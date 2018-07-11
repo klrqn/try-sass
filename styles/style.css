@@ -1,0 +1,8 @@
+body {
+    background: green;
+}
+
+#mapid { 
+    height: 180px; 
+    background: red;
+}
