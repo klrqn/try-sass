@@ -5,4 +5,5 @@ body {
 #mapid { 
     height: 180px; 
     background: red;
+    width: 60%;
 }
