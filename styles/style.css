@@ -1,9 +1,29 @@
 body {
-    background: green;
+    background: #dee;
+    text-align: center;
+    margin: auto;
 }
 
 #mapid { 
-    height: 180px; 
-    background: red;
-    width: 60%;
+    height: 350px; 
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#mapid2 {
+    height: 350px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+h5 {
+    margin-bottom: 1rem;
 }
