@@ -1,5 +1,5 @@
 // initialize the map and set its view to our chosen geographical coordinates and a zoom level
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+var mymap = L.map('mapid').setView([51.508, -0.11], 13);
 
 // add a tile layer to add to our map, in this case it’s a Mapbox Streets tile layer
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -43,8 +43,8 @@ var popup = L.popup()
     .openOn(mymap);
    
     
-var popup = L.popup();
     // show lat long on click
+var popup = L.popup();
 function onMapClick(e) {
     // alert("You clicked the map at " + e.latlng);
     var latlong = document.querySelector(".latlong");
@@ -59,3 +59,18 @@ function onMapClick(e) {
 
 mymap.on('click', onMapClick);
 mymap.on('hover', onMapClick);
+
+
+// make second map
+// initialize the map and set its view to our chosen geographical coordinates and a zoom level
+var mymap2 = L.map('mapid2').setView([41.808, -71.397], 12);
+
+// add a tile layer to add to our map, in this case it’s a Mapbox Streets tile layer
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+	maxZoom: 18,
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+		'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	id: 'mapbox.streets',
+	accessToken: 'pk.eyJ1Ijoia2xycW4iLCJhIjoiY2ltcWpzNzFvMDBqa3V3bTR4YmJiMTZmNCJ9.azeYvLAmWAeNpo694f_Wfg'
+}).addTo(mymap2);
