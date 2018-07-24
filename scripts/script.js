@@ -74,3 +74,15 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1Ijoia2xycW4iLCJhIjoiY2ltcWpzNzFvMDBqa3V3bTR4YmJiMTZmNCJ9.azeYvLAmWAeNpo694f_Wfg'
 }).addTo(mymap2);
+
+function onMapClick2(e) {
+    // alert("You clicked the map at " + e.latlng);
+    var latlong = document.querySelector(".latlong2");
+    latlong.innerHTML = e.latlng;
+    
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+    
+}
